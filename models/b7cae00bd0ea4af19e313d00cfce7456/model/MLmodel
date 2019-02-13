@@ -1,0 +1,12 @@
+artifact_path: model
+flavors:
+  keras:
+    data: model.h5
+    keras_version: 2.1.5
+  python_function:
+    data: model.h5
+    env: conda.yaml
+    loader_module: mlflow.keras
+    python_version: 3.6.4
+run_id: b7cae00bd0ea4af19e313d00cfce7456
+utc_time_created: '2019-02-12 15:34:41.729377'

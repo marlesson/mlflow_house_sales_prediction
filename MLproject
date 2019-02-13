@@ -1,0 +1,20 @@
+# house_sales_prediction/
+# |__ MLproject
+# |__ conda.yaml
+# |__ train.py
+# |__ ...
+
+name: house_sales_prediction
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      max_depth: {type: int, default: 2}
+      n_estimators: {type: int, default: 10}
+    command: "python train.py {max_depth} {n_estimators}"
+  train_deep:
+    parameters: 
+      layers: {type: string, default: '[50]'}
+      epochs: {type: int, default: 10}
+    command: "python train_deep.py {layers} {epochs}"
