@@ -8,7 +8,7 @@
 FROM continuumio/miniconda3:latest
 
 # Model
-ARG model_path=./model_prod/44d4858b516e483d9ec827e6ada0592c/model
+ARG model_path=./models/44d4858b516e483d9ec827e6ada0592c/model
 
 # build
 COPY ${model_path} /app/model
