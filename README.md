@@ -14,3 +14,10 @@ https://www.kaggle.com/harlfoxem/housesalesprediction
 ``
 mlflow run https://github.com/marlesson/mlflow_house_sales_prediction.git
 ``
+
+
+## Predict
+
+``
+curl -H "Content-Type: application/json" --data @body.json http://localhost:8080/ui/webapp/conf
+``

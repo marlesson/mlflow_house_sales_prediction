@@ -1,0 +1,12 @@
+docker build -t ml_model .
+
+docker run -it -p 3001:80 ml_model
+
+gcloud builds submit --tag gcr.io/confraria-dos-dados/ml_model .
+
+gcloud compute instances create-with-container ml-model \
+    --container-image gcr.io/confraria-dos-dados/ml_model:latest \
+    --tags http-server,https-server \
+    --machine-type n1-standard-1 \
+    --zone us-east1-b   
+
